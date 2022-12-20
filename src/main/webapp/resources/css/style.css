@@ -1,0 +1,11 @@
+@charset "ISO-8859-1";
+
+#txtSearch{
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+#btnSearch{
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
