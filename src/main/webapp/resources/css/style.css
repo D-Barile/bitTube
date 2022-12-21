@@ -31,7 +31,16 @@
     padding-top: 10px;
 }
 
+
 .descVideo{
-	padding-top: 10px;
-    font-style: italic;
+	font-style: italic;
+   	background: #efefef;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.descVideo:hover{
+	background: #c3c3c3;	
 }
