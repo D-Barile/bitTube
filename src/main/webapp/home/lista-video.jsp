@@ -5,10 +5,11 @@
 		<%
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bittube", "root", "0810");
-			String sql = "SELECT titolo, codice, durata, genere, descrizione, autore FROM yt_video;";
+			String sql = "SELECT id, titolo, codice, durata, genere, descrizione, autore FROM yt_video;";
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			
+			int id = 0;
 			String titolo = "";
 			String codice = "";
 			String durata = "";
@@ -18,12 +19,13 @@
 			String autore = "";
 			
 			while(rs.next()){
+				id = rs.getInt("id");
 				titolo = rs.getString("titolo");
 				codice = rs.getString("codice");
 				durata = rs.getString("durata");
 				genere = rs.getString("genere");
 				descrizione = rs.getString("descrizione");
-				descrizione = descrizione.replaceAll("'", "\\\\'");
+//				descrizione = descrizione.replaceAll("'", "\\\\'");
 				descrizioneCompleta = descrizione;
 				if(descrizione.length() > 80){
 					descrizione = descrizione.substring(0, 80) + "...";
@@ -31,7 +33,7 @@
 				autore = rs.getString("autore");
 		%>
 		<!-- Singolo video [init] -->
-		<div class="col-3">
+		<div id="container_video_<%= id %>" class="col-3 classeContenitoreVideo">
 			<jsp:include page="single-video.jsp" >
 				<jsp:param value="<%= titolo %>" name="titolo" />
 				<jsp:param value="<%= codice %>" name="codice" />
