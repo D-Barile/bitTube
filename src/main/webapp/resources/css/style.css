@@ -1,5 +1,12 @@
 @charset "ISO-8859-1";
 
+.px-3{
+	position: fixed;
+    left: 0;
+    z-index: 1;
+    right: 0;
+}
+
 #txtSearch{
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
