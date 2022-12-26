@@ -51,3 +51,43 @@
 .descVideo:hover{
 	background: #c3c3c3;	
 }
+
+.footer{
+	margin-bottom: 0% !important;
+}
+
+.footImg{
+	filter: grayscale(100%);
+}
+
+.mainRow{
+	margin-top: 4%;
+}
+
+.row10{
+	margin-left: auto;
+}
+
+.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f1f1f1;
+	overflow: auto;
+	z-index: 1;
+	right: 0;
+}
+
+.dropdown-content input{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown input:hover{
+	background-color: #ddd;
+}
+
+.show{
+	display: block;
+}

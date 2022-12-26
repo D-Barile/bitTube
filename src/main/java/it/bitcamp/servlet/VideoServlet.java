@@ -1,4 +1,4 @@
-package it.bitcamp;
+package it.bitcamp.servlet;
 
 import java.io.IOException;
 import java.sql.Connection;

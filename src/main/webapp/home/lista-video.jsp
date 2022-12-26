@@ -48,25 +48,5 @@
 		<%
 			}
 		%>
-		
-		<script>
-			function showMoreInformation(codice){
-				let status = document.getElementById("desc_state_" + codice);
-				let descrizione = document.getElementById("desc_" + codice);
-				let descrizioneCompleta = document.getElementById("desc_long_" + codice);
-				let descrizioneBreve = document.getElementById("desc_short_" + codice);
-				if(status.value == 0){
-					// Inserisco la descrizione lunga
-					descrizione.innerHTML = descrizioneCompleta.value;
-					// Aggiorno lo stato
-					status.value = 1; // Stato descrizione lunga
-				}else{
-					// Inserisco la descrizione breve
-					descrizione.innerHTML = descrizioneBreve.value;
-					// Aggiorno lo stato
-					status.value = 0; // Stato descrizione breve
-				}
-			}
-		</script>
 	</div>
 </div>

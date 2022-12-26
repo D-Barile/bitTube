@@ -1,3 +1,5 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+
 <!-- Header [init] -->
 <header class="px-3">
 	<nav class="navbar bg-white">
@@ -21,11 +23,38 @@
 				</div>
 				<!-- Searchbar [end] -->
 				<!-- Sezione Login [init] -->
-				<div class="col text-end">
-					<button type="button" class="btn btn-light">
+				<div class="col text-end dropdown">
+					<%
+						String email = null;
+						if(session.getAttribute("email") == null){
+					%>
+					<button type="button" class="btn btn-light dropbtn" onclick="myFunction()">
 						<i class="fa fa-user" aria-hidden="true"></i>
 						Accedi
 					</button>
+					<div id="myDropdown" class="dropdown-content">
+						<form action="${pageContext.request.contextPath}/login" method="POST">
+							<input type="email" id="email" name="email" placeholder="Email" />
+							<input type="password" id="password" name="password" placeholder="Password" />
+							<input type="submit" value="Login" />
+						</form>
+					</div>
+						<% 
+							}else{
+								email = (String)session.getAttribute("email");
+						%>
+						<button type="button" class="btn btn-light dropbtn" onclick="myFunction()">
+							<i class="fa fa-user" aria-hidden="true"></i>
+							${email}
+						</button>
+						<div id="myDropdown" class="dropdown-content">
+							<form action="${pageContext.request.contextPath}/logout" method="GET">
+								<input type="submit" value="Logout" />
+							</form>
+						</div>
+						<%
+							}
+						%>
 				</div>
 				<!-- Sezione Login [end] -->
 			</div>
