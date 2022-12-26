@@ -37,7 +37,8 @@ public class LoginServlet extends HttpServlet {
 				
 				resp.sendRedirect("index.jsp");
 		} else {
-			System.out.print("Email o password errate");
+			System.out.println("Email o password errate");
+			resp.sendRedirect("index.jsp");
 		}
 			
 	}

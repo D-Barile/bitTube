@@ -36,7 +36,7 @@
 						<form action="${pageContext.request.contextPath}/login" method="POST">
 							<input type="email" id="email" name="email" placeholder="Email" />
 							<input type="password" id="password" name="password" placeholder="Password" />
-							<input type="submit" value="Login" />
+							<input id="sub" type="submit" value="Login" />
 						</form>
 					</div>
 						<% 
