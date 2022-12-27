@@ -44,5 +44,12 @@
 	</div>
 	<!-- Playlist button [end] -->
 	<% } %>
+	<%
+		if(session.getAttribute("email") != null){
+	%>
+	<button type="button" class="btn btn-light w-100" onclick="error();">
+		<a>Aggiungi una playlist</a>
+	</button>
+	<% } %>
 </div>
 <!-- Sidebar [end] -->

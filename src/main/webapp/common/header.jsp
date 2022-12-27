@@ -1,5 +1,3 @@
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
-
 <!-- Header [init] -->
 <header class="px-3">
 	<nav class="navbar bg-white">
@@ -43,6 +41,9 @@
 							}else{
 								email = (String)session.getAttribute("email");
 						%>
+						<button type="button" class="btn btn-light dropbtn" onclick="error();">
+							<a>Aggiungi un video</a>
+						</button>
 						<button type="button" class="btn btn-light dropbtn" onclick="myFunction()">
 							<i class="fa fa-user" aria-hidden="true"></i>
 							${email}
