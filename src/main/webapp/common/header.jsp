@@ -41,8 +41,8 @@
 							}else{
 								email = (String)session.getAttribute("email");
 						%>
-						<button type="button" class="btn btn-light dropbtn" onclick="error();">
-							<a>Aggiungi un video</a>
+						<button type="button" class="btn btn-light dropbtn">
+							<a href="aggiungiVideo.jsp">Aggiungi un video</a>
 						</button>
 						<button type="button" class="btn btn-light dropbtn" onclick="myFunction()">
 							<i class="fa fa-user" aria-hidden="true"></i>

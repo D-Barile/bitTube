@@ -23,4 +23,21 @@
 	<div id="desc_${param.codice}" class="descVideo" onClick="showMoreInformation('${param.codice}');">
 		${param.descrizione}
 	</div>
+	
+	<div style="width: 50%; margin-left: auto; margin-right: auto; text-align: center;">
+		<%
+			if(session.getAttribute("email") != null){
+		%>
+				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;">
+					<a href="${pageContext.servletContext.contextPath}/elimina-video?id=${param.id}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+				</button>
+				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;" onclick="error()">
+					<a href="${pageContext.servletContext.contextPath}/"><i class="fa fa-plus" aria-hidden="true"></i></a>
+				</button>
+				
+		<%
+			} 
+		%>
+	</div>
+	
 </div>

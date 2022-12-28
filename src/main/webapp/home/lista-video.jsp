@@ -35,6 +35,7 @@
 		<!-- Singolo video [init] -->
 		<div id="container_video_<%= id %>" class="col-3 classeContenitoreVideo">
 			<jsp:include page="single-video.jsp" >
+				<jsp:param value="<%= id %>" name="id"/>
 				<jsp:param value="<%= titolo %>" name="titolo" />
 				<jsp:param value="<%= codice %>" name="codice" />
 				<jsp:param value="<%= durata %>" name="durata" />

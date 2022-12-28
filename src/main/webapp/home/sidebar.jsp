@@ -41,14 +41,21 @@
 			<i class="fa fa-music" aria-hidden="true"></i>
 			<%= titolo %>
 		</button>
+		<%
+			if(session.getAttribute("email") != null){
+		%>
+				<a href="${pageContext.servletContext.contextPath}/elimina-playlist?id=<%= id %>" style="margin-left: 50%;"> <i class="fa fa-trash" aria-hidden="true"></i></a>
+		<%
+			} 
+		%>
 	</div>
 	<!-- Playlist button [end] -->
 	<% } %>
 	<%
 		if(session.getAttribute("email") != null){
 	%>
-	<button type="button" class="btn btn-light w-100" onclick="error();">
-		<a>Aggiungi una playlist</a>
+	<button type="button" class="btn btn-light w-100">
+		<a href="aggiungiPlaylist.jsp">Aggiungi una playlist</a>
 	</button>
 	<% } %>
 </div>
