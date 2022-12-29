@@ -74,4 +74,64 @@ public class VideoDAO {
 		}
 	}
 	
+	public void updateTitolo(Video v) {
+		String sql = "UPDATE yt_video SET titolo = '" + v.getTitolo() + "' WHERE id = '" + v.getId() + "';";
+		try {
+			Statement stmt = this.conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateCodice(Video v) {
+		String sql = "UPDATE yt_video SET codice = '" + v.getCodice() + "' WHERE id = '" + v.getId() + "';";
+		try {
+			Statement stmt = this.conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateDurata(Video v) {
+		String sql = "UPDATE yt_video SET durata = '" + v.getDurata() + "' WHERE id = '" + v.getId() + "';";
+		try {
+			Statement stmt = this.conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateGenere(Video v) {
+		String sql = "UPDATE yt_video SET genere = '" + v.getGenere() + "' WHERE id = '" + v.getId() + "';";
+		try {
+			Statement stmt = this.conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateDescrizione(Video v) {
+		String sql = "UPDATE yt_video SET descrizione = '" + v.getDescrizione() + "' WHERE id = '" + v.getId() + "';";
+		try {
+			Statement stmt = this.conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public void updateAutore(Video v) {
+		String sql = "UPDATE yt_video SET autore = '" + v.getAutore() + "' WHERE id = '" + v.getId() + "';";
+		try {
+			Statement stmt = this.conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }

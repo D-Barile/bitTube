@@ -37,6 +37,9 @@
 				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;">
 					<a href="${pageContext.request.contextPath}/rimuovi-video-dalla-playlist?id=${param.id}"><i class="fa fa-minus" aria-hidden="true"></i></a>
 				</button>
+				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;">
+					<a href="${pageContext.request.contextPath}/update-video?id=${param.id}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+				</button>
 		<%
 			} 
 		%>

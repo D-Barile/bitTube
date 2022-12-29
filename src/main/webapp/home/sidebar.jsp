@@ -44,7 +44,11 @@
 		<%
 			if(session.getAttribute("email") != null){
 		%>
-				<a href="${pageContext.servletContext.contextPath}/elimina-playlist?id=<%= id %>" style="margin-left: 50%;"> <i class="fa fa-trash" aria-hidden="true"></i></a>
+				<div  style="text-align: center;">
+					<a href="${pageContext.servletContext.contextPath}/elimina-playlist?id=<%= id %>"><i class="fa fa-trash" aria-hidden="true"></i></a>
+					<a href="${pageContext.servletContext.contextPath}/aggiorna-playlist?id=<%= id %>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+				</div>
+					
 		<%
 			} 
 		%>
