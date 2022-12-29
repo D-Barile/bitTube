@@ -31,10 +31,12 @@
 				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;">
 					<a href="${pageContext.servletContext.contextPath}/elimina-video?id=${param.id}"><i class="fa fa-trash" aria-hidden="true"></i></a>
 				</button>
-				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;" onclick="error()">
-					<a href="${pageContext.servletContext.contextPath}/"><i class="fa fa-plus" aria-hidden="true"></i></a>
+				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;">
+					<a href="${pageContext.request.contextPath}/aggiungi-video-alla-playlist?id=${param.id}"><i class="fa fa-plus" aria-hidden="true"></i></a>
 				</button>
-				
+				<button style="border: none; margin-top: 5px; border-radius: 12px; background: white;">
+					<a href="${pageContext.request.contextPath}/rimuovi-video-dalla-playlist?id=${param.id}"><i class="fa fa-minus" aria-hidden="true"></i></a>
+				</button>
 		<%
 			} 
 		%>

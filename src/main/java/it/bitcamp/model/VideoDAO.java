@@ -53,9 +53,9 @@ public class VideoDAO {
 		return v;
 	}
 	
-	/*
+	
 	public void addVideoToPlaylist(int idVideo, int idPlaylist) {
-		String sql = "INSERT INTO yt_playlist_manager VALUES(" + getById(idVideo) + "," + idPlaylist + ");";
+		String sql = "INSERT INTO yt_playlist_manager VALUES(" + idVideo + "," + idPlaylist + ");";
 		try {
 			Statement stmt = this.conn.createStatement();
 			stmt.executeUpdate(sql);
@@ -63,5 +63,15 @@ public class VideoDAO {
 			e.printStackTrace();
 		}
 	}
-	*/
+	
+	public void removeVideoFromPlaylist(int idVideo, int idPlaylist) {
+		String sql = "DELETE FROM yt_playlist_manager WHERE id_video = " + idVideo + " AND " + "id_playlist = " + idPlaylist + ";";
+		try {
+			Statement stmt = this.conn.createStatement();
+			stmt.executeUpdate(sql);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 }
