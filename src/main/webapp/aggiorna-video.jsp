@@ -7,7 +7,7 @@
 <title>Aggiorna video</title>
 </head>
 <body>
-	<form action="${pageContext.servletContext.contextPath}/update-video?id=${param.id}" method="POST">
+	<form action="${pageContext.request.contextPath}/update-video?id=${param.id}" method="POST">
 		<input type="text" name="titolo" value="${video.titolo}">
 		<input type="text" name="codice" value="${video.codice}">
 		<input type="text" name="durata" value="${video.durata}">
