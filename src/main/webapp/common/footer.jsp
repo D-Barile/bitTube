@@ -9,8 +9,24 @@
 
     <ul class="nav col-md-4 justify-content-end">
       <li class="nav-item"><a href="#" class="nav-link px-2 text-muted" onClick="showAllVideos();">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Accedi</a></li>
-    </ul>
+		<% 
+	   		String email = null;
+	 		if(session.getAttribute("email") == null){
+		%>	
+    		<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Accedi</a></li>
+   			</ul>
+    	<% 
+    		}else{
+		%>
+				<li class="nav-item"><a href="#" class="nav-link px-2 text-muted">${email}</a></li>
+    	<% 
+    		}
+	 	%>	
+    	
+    		
+    	
+      
+      
   </footer>
 </div>
 <!-- Footer [end] -->
